@@ -3,7 +3,7 @@
 import UIKit
 
 class DetailVC: UIViewController, UITextFieldDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
-    @IBAction func backgroundTapped(sender: UITapGestureRecognizer) {
+    @IBAction func backgroundTapped(_ sender: UITapGestureRecognizer) {
         view.endEditing(true)
     }
     @IBOutlet var nameField: UITextField!
@@ -11,25 +11,25 @@ class DetailVC: UIViewController, UITextFieldDelegate, UINavigationControllerDel
     @IBOutlet var caloriesField: UITextField!
     @IBOutlet var dateLabel: UILabel!
     @IBOutlet var imageView: UIImageView!
-    @IBAction func takePicture(sender: UIBarButtonItem) {
+    @IBAction func takePicture(_ sender: UIBarButtonItem) {
         
         let imagePicker = UIImagePickerController()
         
         // If the device has a camera, take a picture; otherwise, just pick from photo library
-        if UIImagePickerController.isSourceTypeAvailable(.Camera) {
-            imagePicker.sourceType = .Camera
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            imagePicker.sourceType = .camera
         }
         else {
-            imagePicker.sourceType = .PhotoLibrary
+            imagePicker.sourceType = .photoLibrary
         }
         
         imagePicker.delegate = self
         
         // Place image picker on the screen
-        presentViewController(imagePicker, animated: true, completion: nil)
+        present(imagePicker, animated: true, completion: nil)
     }
     
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
         // Get picked image from info dictionary
         let image = info[UIImagePickerControllerOriginalImage] as! UIImage
@@ -41,7 +41,7 @@ class DetailVC: UIViewController, UITextFieldDelegate, UINavigationControllerDel
         imageView.image = image
         
         // Take image picker off the screen - you must dismiss method
-        dismissViewControllerAnimated(true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
     
     var food: Food! {
@@ -52,33 +52,33 @@ class DetailVC: UIViewController, UITextFieldDelegate, UINavigationControllerDel
     
     var imageStore: ImageStore!
     
-    let numberFormatter: NSNumberFormatter = {
-        let formatter = NSNumberFormatter()
-        formatter.numberStyle = .DecimalStyle
+    let numberFormatter: NumberFormatter = {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
         formatter.minimumFractionDigits = 2
         formatter.maximumFractionDigits = 2
         return formatter
     }()
     
-    let dateFormatter: NSDateFormatter = {
-        let formatter = NSDateFormatter()
-        formatter.dateStyle = .MediumStyle
-        formatter.timeStyle = .NoStyle
+    let dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .none
         return formatter
     }()
     
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         nameField.text = food.foodName
         locationField.text = food.location
-        caloriesField.text = numberFormatter.stringFromNumber(food.calories)
-        dateLabel.text = dateFormatter.stringFromDate(food.dateCreated)
+        caloriesField.text = numberFormatter.string(from: NSNumber(food.calories))
+        dateLabel.text = dateFormatter.string(from: food.dateCreated as Date)
         
         // Get the food key
         let key = food.foodKey
@@ -89,7 +89,7 @@ class DetailVC: UIViewController, UITextFieldDelegate, UINavigationControllerDel
         
     }
     
-    override func viewWillDisappear(animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
         // Clear first responder
@@ -100,8 +100,8 @@ class DetailVC: UIViewController, UITextFieldDelegate, UINavigationControllerDel
         food.location = locationField.text
         
         if let caloriesText = caloriesField.text,
-            caloriesInfo = numberFormatter.numberFromString(caloriesText) {
-            food.calories = caloriesInfo.integerValue
+            let caloriesInfo = numberFormatter.number(from: caloriesText) {
+            food.calories = caloriesInfo.intValue
         }
         else {
             food.calories = 0

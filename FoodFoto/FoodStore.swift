@@ -4,10 +4,10 @@ import UIKit
 class FoodStore {
     
     var allFood = [Food]()
-    let foodArchiveURL: NSURL = {
-        let documentsDirectories = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
+    let foodArchiveURL: URL = {
+        let documentsDirectories = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         let documentDirectory = documentsDirectories.first!
-        return documentDirectory.URLByAppendingPathComponent("food.archive")
+        return documentDirectory.appendingPathComponent("food.archive")
     }()
     
     func createFood() -> Food {
@@ -19,13 +19,13 @@ class FoodStore {
         
     }
     
-    func removeFood(food: Food) {
-        if let index = allFood.indexOf(food) {
-            allFood.removeAtIndex(index)
+    func removeFood(_ food: Food) {
+        if let index = allFood.index(of: food) {
+            allFood.remove(at: index)
         }
     }
     
-    func moveFoodAtIndex(fromIndex: Int, toIndex: Int) {
+    func moveFoodAtIndex(_ fromIndex: Int, toIndex: Int) {
         if fromIndex == toIndex {
             return
         }
@@ -34,19 +34,19 @@ class FoodStore {
         let movedFood = allFood[fromIndex]
         
         // Remove food from array
-        allFood.removeAtIndex(fromIndex)
+        allFood.remove(at: fromIndex)
         
         // Insert itemin array at new location
-        allFood.insert(movedFood, atIndex: toIndex)
+        allFood.insert(movedFood, at: toIndex)
     }
     
     func saveChanges() -> Bool {
-        print("Saving items to: \(foodArchiveURL.path!)")
-        return NSKeyedArchiver.archiveRootObject(allFood, toFile: foodArchiveURL.path!)
+        print("Saving items to: \(foodArchiveURL.path)")
+        return NSKeyedArchiver.archiveRootObject(allFood, toFile: foodArchiveURL.path)
     }
     
     init() {
-        if let archivedFood = NSKeyedUnarchiver.unarchiveObjectWithFile(foodArchiveURL.path!) as? [Food] {
+        if let archivedFood = NSKeyedUnarchiver.unarchiveObject(withFile: foodArchiveURL.path) as? [Food] {
             allFood += archivedFood
         }
     }

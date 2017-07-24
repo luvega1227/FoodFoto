@@ -6,15 +6,15 @@ class Food: NSObject, NSCoding {
     var foodName: String
     var calories: Int
     var location: String?
-    let dateCreated: NSDate
+    let dateCreated: Date
     let foodKey: String
     
     init(foodName: String, calories: Int, location: String?) {
     self.foodName = foodName
     self.calories = calories
     self.location = location
-    self.dateCreated = NSDate()
-    self.foodKey = NSUUID().UUIDString
+    self.dateCreated = Date()
+    self.foodKey = UUID().uuidString
     
     super.init()
         
@@ -35,22 +35,22 @@ class Food: NSObject, NSCoding {
         }
     }
     
-    func encodeWithCoder(aCoder: NSCoder) {
-        aCoder.encodeObject(foodName, forKey: "foodName")
-        aCoder.encodeObject(dateCreated, forKey: "dateCreated")
-        aCoder.encodeObject(foodKey, forKey: "foodKey")
-        aCoder.encodeObject(location, forKey: "location")
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(foodName, forKey: "foodName")
+        aCoder.encode(dateCreated, forKey: "dateCreated")
+        aCoder.encode(foodKey, forKey: "foodKey")
+        aCoder.encode(location, forKey: "location")
         
-        aCoder.encodeInteger(calories, forKey: "calories")
+        aCoder.encode(calories, forKey: "calories")
     }
     
     required init(coder aDecoder: NSCoder) {
-        foodName = aDecoder.decodeObjectForKey("foodName") as! String
-        dateCreated = aDecoder.decodeObjectForKey("dateCreated") as! NSDate
-        foodKey = aDecoder.decodeObjectForKey("foodKey") as! String
-        location = aDecoder.decodeObjectForKey("location") as! String?
+        foodName = aDecoder.decodeObject(forKey: "foodName") as! String
+        dateCreated = aDecoder.decodeObject(forKey: "dateCreated") as! Date
+        foodKey = aDecoder.decodeObject(forKey: "foodKey") as! String
+        location = aDecoder.decodeObject(forKey: "location") as! String?
         
-        calories = aDecoder.decodeIntegerForKey("calories")
+        calories = aDecoder.decodeInteger(forKey: "calories")
         
         super.init()
     }
