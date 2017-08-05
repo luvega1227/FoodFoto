@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		780FA6961D2E444E008EE479 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 780FA6951D2E444E008EE479 /* Images.xcassets */; };
+		781029871F2C08FB00F2D5BF /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781029861F2C08FB00F2D5BF /* RatingControl.swift */; };
+		781029891F311EFD00F2D5BF /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781029881F311EFD00F2D5BF /* DetailVC.swift */; };
 		787A2FE91D12896400D752BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787A2FE81D12896400D752BB /* AppDelegate.swift */; };
 		787A2FEE1D12896400D752BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 787A2FEC1D12896400D752BB /* Main.storyboard */; };
 		787A2FF01D12896400D752BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 787A2FEF1D12896400D752BB /* Assets.xcassets */; };
@@ -15,14 +17,15 @@
 		787A2FFD1D128AA300D752BB /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787A2FFC1D128AA300D752BB /* Food.swift */; };
 		787A2FFF1D12915500D752BB /* FoodStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787A2FFE1D12915500D752BB /* FoodStore.swift */; };
 		78BE7D581D13D72A0013F531 /* FoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BE7D571D13D72A0013F531 /* FoodCell.swift */; };
-		78BE7D611D1B258D0013F531 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BE7D601D1B258D0013F531 /* DetailVC.swift */; };
+		78BE7D611D1B258D0013F531 /* FoodVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BE7D601D1B258D0013F531 /* FoodVC.swift */; };
 		78BE7D661D1C940C0013F531 /* ImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BE7D651D1C940C0013F531 /* ImageStore.swift */; };
-		78E64F081D1353200017EB1D /* FoodVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E64F071D1353200017EB1D /* FoodVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		780FA6951D2E444E008EE479 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = FoodFoto.temp_caseinsensitive_rename/Images.xcassets; sourceTree = "<group>"; };
-		787A2FE51D12896400D752BB /* FoodFoto.temp_caseinsensitive_rename.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodFoto.temp_caseinsensitive_rename.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		781029861F2C08FB00F2D5BF /* RatingControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
+		781029881F311EFD00F2D5BF /* DetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailVC.swift; path = ../DetailVC.swift; sourceTree = "<group>"; };
+		787A2FE51D12896400D752BB /* FoodFoto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodFoto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		787A2FE81D12896400D752BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		787A2FED1D12896400D752BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		787A2FEF1D12896400D752BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -31,9 +34,8 @@
 		787A2FFC1D128AA300D752BB /* Food.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		787A2FFE1D12915500D752BB /* FoodStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodStore.swift; sourceTree = "<group>"; };
 		78BE7D571D13D72A0013F531 /* FoodCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodCell.swift; sourceTree = "<group>"; };
-		78BE7D601D1B258D0013F531 /* DetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
+		78BE7D601D1B258D0013F531 /* FoodVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodVC.swift; sourceTree = "<group>"; };
 		78BE7D651D1C940C0013F531 /* ImageStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageStore.swift; sourceTree = "<group>"; };
-		78E64F071D1353200017EB1D /* FoodVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +61,7 @@
 		787A2FE61D12896400D752BB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				787A2FE51D12896400D752BB /* FoodFoto.temp_caseinsensitive_rename.app */,
+				787A2FE51D12896400D752BB /* FoodFoto.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,13 +69,14 @@
 		787A2FE71D12896400D752BB /* FoodFoto */ = {
 			isa = PBXGroup;
 			children = (
-				78E64F071D1353200017EB1D /* FoodVC.swift */,
 				787A2FE81D12896400D752BB /* AppDelegate.swift */,
-				78BE7D651D1C940C0013F531 /* ImageStore.swift */,
+				78BE7D601D1B258D0013F531 /* FoodVC.swift */,
 				787A2FFC1D128AA300D752BB /* Food.swift */,
-				78BE7D601D1B258D0013F531 /* DetailVC.swift */,
-				787A2FFE1D12915500D752BB /* FoodStore.swift */,
+				781029861F2C08FB00F2D5BF /* RatingControl.swift */,
 				78BE7D571D13D72A0013F531 /* FoodCell.swift */,
+				781029881F311EFD00F2D5BF /* DetailVC.swift */,
+				78BE7D651D1C940C0013F531 /* ImageStore.swift */,
+				787A2FFE1D12915500D752BB /* FoodStore.swift */,
 				787A2FEC1D12896400D752BB /* Main.storyboard */,
 				787A2FEF1D12896400D752BB /* Assets.xcassets */,
 				787A2FF11D12896400D752BB /* LaunchScreen.storyboard */,
@@ -85,9 +88,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		787A2FE41D12896400D752BB /* FoodFoto.temp_caseinsensitive_rename */ = {
+		787A2FE41D12896400D752BB /* FoodFoto */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 787A2FF71D12896400D752BB /* Build configuration list for PBXNativeTarget "FoodFoto.temp_caseinsensitive_rename" */;
+			buildConfigurationList = 787A2FF71D12896400D752BB /* Build configuration list for PBXNativeTarget "FoodFoto" */;
 			buildPhases = (
 				787A2FE11D12896400D752BB /* Sources */,
 				787A2FE21D12896400D752BB /* Frameworks */,
@@ -97,9 +100,9 @@
 			);
 			dependencies = (
 			);
-			name = FoodFoto.temp_caseinsensitive_rename;
+			name = FoodFoto;
 			productName = FlashDiet2;
-			productReference = 787A2FE51D12896400D752BB /* FoodFoto.temp_caseinsensitive_rename.app */;
+			productReference = 787A2FE51D12896400D752BB /* FoodFoto.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -132,7 +135,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				787A2FE41D12896400D752BB /* FoodFoto.temp_caseinsensitive_rename */,
+				787A2FE41D12896400D752BB /* FoodFoto */,
 			);
 		};
 /* End PBXProject section */
@@ -160,9 +163,10 @@
 				787A2FE91D12896400D752BB /* AppDelegate.swift in Sources */,
 				78BE7D581D13D72A0013F531 /* FoodCell.swift in Sources */,
 				787A2FFF1D12915500D752BB /* FoodStore.swift in Sources */,
-				78E64F081D1353200017EB1D /* FoodVC.swift in Sources */,
+				781029871F2C08FB00F2D5BF /* RatingControl.swift in Sources */,
+				781029891F311EFD00F2D5BF /* DetailVC.swift in Sources */,
 				78BE7D661D1C940C0013F531 /* ImageStore.swift in Sources */,
-				78BE7D611D1B258D0013F531 /* DetailVC.swift in Sources */,
+				78BE7D611D1B258D0013F531 /* FoodVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,7 +291,7 @@
 				INFOPLIST_FILE = FoodFoto/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vega.FoodFoto;
-				PRODUCT_NAME = FoodFoto.temp_caseinsensitive_rename;
+				PRODUCT_NAME = FoodFoto;
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -302,7 +306,7 @@
 				INFOPLIST_FILE = FoodFoto/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vega.FoodFoto;
-				PRODUCT_NAME = FoodFoto.temp_caseinsensitive_rename;
+				PRODUCT_NAME = FoodFoto;
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -320,7 +324,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		787A2FF71D12896400D752BB /* Build configuration list for PBXNativeTarget "FoodFoto.temp_caseinsensitive_rename" */ = {
+		787A2FF71D12896400D752BB /* Build configuration list for PBXNativeTarget "FoodFoto" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				787A2FF81D12896400D752BB /* Debug */,

@@ -1,5 +1,4 @@
 
-
 import UIKit
 
 class FoodVC: UITableViewController {
@@ -73,13 +72,13 @@ class FoodVC: UITableViewController {
             ac.addAction(cancelAction)
             
             let deleteAction = UIAlertAction(title: "Delete", style: .destructive, handler: { (action) -> Void in
-            
+                
                 // Remove the food from the store
                 self.foodStore.removeFood(food)
                 
                 // Remove the food's image from the image store
                 self.imageStore.deleteImageForKey(food.foodKey)
-            
+                
                 // Also remove that row from the table view with an animation
                 self.tableView.deleteRows(at: [indexPath], with: .automatic)
             })

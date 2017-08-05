@@ -3,11 +3,15 @@ import UIKit
 
 class Food: NSObject, NSCoding {
     
+    // MARK: Properties
+    
     var foodName: String
     var calories: Int
     var location: String?
     let dateCreated: Date
     let foodKey: String
+    
+    // MARK: Initiliaztion
     
     init(foodName: String, calories: Int, location: String?) {
     self.foodName = foodName
@@ -34,6 +38,8 @@ class Food: NSObject, NSCoding {
             self.init(foodName: "", calories: 0, location: "")
         }
     }
+    
+    // MARK: NSCoding
     
     func encode(with aCoder: NSCoder) {
         aCoder.encode(foodName, forKey: "foodName")

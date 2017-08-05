@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "787A2FE41D12896400D752BB"
-               BuildableName = "FoodFoto.temp_caseinsensitive_rename.app"
-               BlueprintName = "FoodFoto.temp_caseinsensitive_rename"
+               BuildableName = "FoodFoto.app"
+               BlueprintName = "FoodFoto"
                ReferencedContainer = "container:FoodFoto.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -33,8 +33,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "787A2FE41D12896400D752BB"
-            BuildableName = "FoodFoto.temp_caseinsensitive_rename.app"
-            BlueprintName = "FoodFoto.temp_caseinsensitive_rename"
+            BuildableName = "FoodFoto.app"
+            BlueprintName = "FoodFoto"
             ReferencedContainer = "container:FoodFoto.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -56,8 +56,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "787A2FE41D12896400D752BB"
-            BuildableName = "FoodFoto.temp_caseinsensitive_rename.app"
-            BlueprintName = "FoodFoto.temp_caseinsensitive_rename"
+            BuildableName = "FoodFoto.app"
+            BlueprintName = "FoodFoto"
             ReferencedContainer = "container:FoodFoto.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -75,8 +75,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "787A2FE41D12896400D752BB"
-            BuildableName = "FoodFoto.temp_caseinsensitive_rename.app"
-            BlueprintName = "FoodFoto.temp_caseinsensitive_rename"
+            BuildableName = "FoodFoto.app"
+            BlueprintName = "FoodFoto"
             ReferencedContainer = "container:FoodFoto.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

@@ -1,5 +1,3 @@
-
-
 import UIKit
 
 class DetailVC: UIViewController, UITextFieldDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
@@ -77,7 +75,7 @@ class DetailVC: UIViewController, UITextFieldDelegate, UINavigationControllerDel
         
         nameField.text = food.foodName
         locationField.text = food.location
-        caloriesField.text = numberFormatter.string(from: NSNumber(food.calories))
+        //caloriesField.text = numberFormatter.string(from: NSNumber(food.calories))
         dateLabel.text = dateFormatter.string(from: food.dateCreated as Date)
         
         // Get the food key
